@@ -1,5 +1,17 @@
 # functions for getting parameters of the proposed transformation formula
 
+function Cabsprit(Cab)
+    C = Cab[1]
+    a = zeros(BigFloat,Np)
+    b = zeros(BigFloat,Np-1)
+    for i = 1:Np-1
+        a[i] = Cab[2*i]
+        b[i] = Cab[2*i+1]
+    end
+    a[Np] = Cab[2*Np]
+    return C,a,b
+end
+
 # convert x to Cab
 function xtoCab(x)
     Cab = zeros(BigFloat,2*Np)

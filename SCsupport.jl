@@ -1,17 +1,6 @@
 # functions for supporting operations
 
 # convert Cab to C,a,b
-function Cabsprit(Cab)
-    C = Cab[1]
-    a = zeros(BigFloat,Np)
-    b = zeros(BigFloat,Np-1)
-    for i = 1:Np-1
-        a[i] = Cab[2*i]
-        b[i] = Cab[2*i+1]
-    end
-    a[Np] = Cab[2*Np]
-    return C,a,b
-end
 
 # convert pole "z" to dlt, ept (by asinh)
 function zto_asinh(z)
