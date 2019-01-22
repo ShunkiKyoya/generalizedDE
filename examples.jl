@@ -45,7 +45,12 @@ if exid == 1
     singends = [big(0.0); -0.5]
 end
 
+# getting parameters
 ψ, invψ, dψ, Sψ = Getpsi()
 T, β_factor = GetTβ(singends)
 dlt, ept = GetStilde(S, Sψ)
 m = length(dlt)
+D = GetD(dlt)
+
+print("calculating C,a,b ...\n")
+@time C, a, b = Cabsprit(xtoCab(Getparameter().zero))

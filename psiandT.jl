@@ -64,3 +64,11 @@ function GetStilde(S,Sψ)
     end
     return dlt,ept
 end
+
+function GetD(dlt)
+    D = zeros(BigFloat,m-1)
+    for i = 1:m-1
+        D[i] = (dlt[i+1]-dlt[i])/big(π)
+    end
+    return D
+end

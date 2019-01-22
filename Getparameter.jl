@@ -8,7 +8,7 @@ function Cabsprit(Cab)
         a[i] = Cab[2*i]
         b[i] = Cab[2*i+1]
     end
-    a[Np] = Cab[2*m]
+    a[m] = Cab[2*m]
     return C,a,b
 end
 
@@ -71,12 +71,12 @@ function mEq_Cab_Jacobi(Cab)
     a = Cabsprit(Cab)[2]
     b = Cabsprit(Cab)[3]
 
-    for i = 1:Np
+    for i = 1:m
         J[i   ,1] = sinh(a[i]-T)
         J[i+m,1] = cosh(a[i]-T)
         J[i   ,2*i] = C*cosh(a[i]-T)
         J[i+m,2*i] = C*sinh(a[i]-T)
-        for j = 1:Np-1
+        for j = 1:m-1
             J[i   ,2*i] = J[i,2*i] + D[j]*cosh(a[i]-b[j])/sinh(a[i]-b[j])^2
             J[i+m,2*i] = J[m+i,2*i] - D[j]/sinh(a[i]-b[j])
             J[i   ,2*j+1] = - D[j]*cosh(a[i]-b[j])/sinh(a[i]-b[j])^2
