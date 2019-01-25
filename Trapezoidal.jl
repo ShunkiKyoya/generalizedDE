@@ -1,20 +1,22 @@
 # functions for numerical integration with trapezoidal rule
 
-function nI(F,n,β,d)
+function nI(H,dH,n)
+    d = big(π)/2
+    F = t -> f(ψ(H(t))).*dψ(H(t)).*dH(t)
     I = big(0.0)
-    l = log(big(π)*d*n*2/β)/n
+    h = log(big(π)*d*n*2/β)/n
     print(n, "time\n")
     @time for j = -n:n
-        if !isnan(F(j*l)) && !isinf(F(j*l)) && !isinf(-F(j*l))
-            I = I + F(j*l)
+        if !isnan(F(j*h)) && !isinf(F(j*h)) && !isinf(-F(j*h))
+            I = I + F(j*h)
         end
     end
-    I = I*l
+    I = I*h
     return I
 end
 
-function nIarray!(Iarray,F,nidx,β,d)
+function nIarray!(Iarray,H,dH,nidx)
     for i = 1:length(Iarray)
-        Iarray[i] = nI(F,nidx[i],β,d)
+        Iarray[i] = nI(H,dH,nidx[i])
     end
 end

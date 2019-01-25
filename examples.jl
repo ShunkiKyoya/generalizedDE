@@ -34,6 +34,7 @@ digits(300) # significant digits
 include("Getparameter.jl")
 include("Trapezoidal.jl")
 include("psiandT.jl")
+include("HNew.jl")
 
 exid = 1
 
@@ -52,5 +53,11 @@ dlt, ept = GetStilde(S, Sψ)
 m = length(dlt)
 D = GetD(dlt)
 
+# calculate C, a, b with NLsolve
 print("calculating C,a,b ...\n")
 @time C, a, b = Cabsprit(xtoCab(Getparameter().zero))
+β = C*β_factor
+
+INew = zeros(BigFloat,2)
+nidx = [100;200]
+nIarray!(INew,HNew,dHNew,nidx)
