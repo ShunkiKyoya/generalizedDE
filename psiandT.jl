@@ -45,8 +45,8 @@ function GetStilde(S,Sψ)
         dlt0 = push!(real.(invψ(S)),real(Sψ[1]))
         ept0 = push!(imag.(invψ(S)),imag(Sψ[1]))
     else
-        dlt0 = real.(log.(z))
-        ept0 = imag.(log.(z))
+        dlt0 = real.(invψ(S))
+        ept0 = imag.(invψ(S))
     end
     id = sortperm(dlt0)
     dlt = [big(dlt0[id[1]])]
@@ -55,11 +55,9 @@ function GetStilde(S,Sψ)
         if dlt0[id[i]]-dlt0[id[i-1]]>1e-8
             push!(dlt,dlt0[id[i]])
             push!(ept,ept0[id[i]])
-        else
-            if ept0[id[i]]<ept[end]
+        elseif ept0[id[i]]<ept[end]
                 dlt[end] = dlt0[id[i]]
                 ept[end] = ept0[id[i]]
-            end
         end
     end
     return dlt,ept
