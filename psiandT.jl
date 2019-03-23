@@ -52,7 +52,7 @@ function GetStilde(S,Sψ)
     dlt = [big(dlt0[id[1]])]
     ept = [big(ept0[id[1]])]
     for i = 2:length(dlt0)
-        if dlt0[id[i]]-dlt0[id[i-1]]>1e-8
+        if dlt0[id[i]] != dlt0[id[i-1]]
             push!(dlt,dlt0[id[i]])
             push!(ept,ept0[id[i]])
         elseif ept0[id[i]]<ept[end]
