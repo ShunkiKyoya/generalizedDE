@@ -77,5 +77,5 @@ print("calculating C,a,b ...\n")
 β = C*β_factor
 
 INew = zeros(BigFloat,2)
-nidx = [100;4000]
+nidx = [100;200]
 nIarray!(INew,HNew,dHNew,nidx)
