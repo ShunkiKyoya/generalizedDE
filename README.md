@@ -17,8 +17,8 @@ By default, we use `Plots` and `plotly` to plot.
 You need to
 
 ### References
-[1](https://epubs.siam.org/doi/10.1137/140978363)
-Slevinsky, R. M., Olver, S.,: `On the use of conformal maps for
+[^1]:Slevinsky, R. M., Olver, S.,: [On the use of conformal maps for
 the acceleration of convergence of the trapezoidal rule and
-sinc numerical methods`, SIAM J. Sci. Comput., 37(2)(2015),
+sinc numerical methods](https://epubs.siam.org/doi/10.1137/140978363),
+SIAM J. Sci. Comput., 37(2)(2015),
 A676–A700.
