@@ -18,7 +18,6 @@ By default, it uses `Plots` and `plotly` to plot.
 | psid | interval |
 |:----:|:--------:|
 |1     |(-1, 1)   |
-|2     |$(-\infty, \infty)$|
 
 ### References
 [1] Slevinsky, R. M., Olver, S. (2005) :
