@@ -21,7 +21,7 @@ By default, it uses `Plots` and `plotly` to plot.
 |1|(-1,1)|f(x)|
 |2|(-∞, ∞)|f(x)|
 |3|(0,∞)|f(x)|
-|4|(0,∞)|f₋1(x)exp(-vx)|
+|4|(0,∞)|f1(x)exp(-vx)|
 ### References
 [1] Slevinsky, R. M., Olver, S. (2005) :
 [On the use of conformal maps for the acceleration of convergence of the trapezoidal rule
