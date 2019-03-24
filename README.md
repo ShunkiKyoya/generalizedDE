@@ -17,7 +17,7 @@ By default, it uses `Plots` and `plotly` to plot.
 * `psid` defines the interval and integrand:
 
 | psid | interval | integrand |
-|:---:|:---:|:---:|:---:|
+|:---:|:---:|:---:|
 |1|(-1,1)|f(x)|
 |2|(-∞, ∞)|f(x)|
 |3|(0,∞)|f(x)|
