@@ -14,9 +14,9 @@ to compare our method to the previous research [1].
 By default, it uses `Plots` and `plotly` to plot.
 
 ### Settings
-| 1 | 2 |
-|:---:|:---:|
-|  1  |  2    |
+| psid | interval | integrand | change of variables |
+|:---:|:---:|:---:|:---:|
+|1|(-1,1)|f(x)|x = tanh(sinh(t))|
 
 ### References
 [1] Slevinsky, R. M., Olver, S. (2005) :
