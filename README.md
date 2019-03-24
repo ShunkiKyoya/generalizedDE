@@ -9,12 +9,16 @@ in spite of the existence of singularities.
 ### Remark
 This program uses [NLsolve](https://github.com/JuliaNLSolvers/NLsolve.jl)
 to solve non-linear systems of equations.
-Also, we use [DEQuadrature](https://github.com/MikaelSlevinsky/DEQuadrature.jl)
+Also, it uses [DEQuadrature](https://github.com/MikaelSlevinsky/DEQuadrature.jl)
 to compare our method to the previous research [1].
-By default, we use `Plots` and `plotly` to plot.
+By default, it uses `Plots` and `plotly` to plot.
 
 ### Settings
-You need to
+* `psid` assigns the interval of the integral:
+| psid | interval |
+|:----:|:--------:|
+|1     |(-1, 1)   |
+|2     |$(-\infty, \infty)$|
 
 ### References
 [1] Slevinsky, R. M., Olver, S. (2005) :
