@@ -15,6 +15,7 @@ By default, it uses `Plots` and `plotly` to plot.
 
 ### Settings
 * `psid` defines
+
 | psid | interval | integrand | $\psi$ |
 |:---:|:---:|:---:|:---:|
 |1|(-1,1)|f(x)|x = tanh(.)|
