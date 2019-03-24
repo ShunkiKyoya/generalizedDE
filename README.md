@@ -14,10 +14,9 @@ to compare our method to the previous research [1].
 By default, it uses `Plots` and `plotly` to plot.
 
 ### Settings
-* `psid` assigns the interval of the integral:
-| psid | interval |
-|:----:|:--------:|
-|1     |(-1, 1)   |
+| 1 | 2 |
+|:---:|:---:|
+|  1  |  2    |
 
 ### References
 [1] Slevinsky, R. M., Olver, S. (2005) :
