@@ -1,4 +1,4 @@
-# "psid" defines psi.
+# "psid" defines ψ.
 # psid = 1: ψ = tanh(.)
 #        2: ψ = sinh(.)
 #        3: ψ = exp(.)
@@ -18,14 +18,15 @@
 #     singends = [v; q] when f(x) = O(exp(-(v-ε)x)) (x → +∞)
 #                                 = O(x^q) (x → +0)
 #
-#
-#
 
 using Base.Test
 import Base.digits
 
 ### This program uses NLsolve for solving nonliniar equations.
 using NLsolve
+
+
+using Plots; plotly()
 
 ### setting precision of BigFloat
 digits(n::Int) = setprecision(round(Int,ceil(n*log2(10))))
@@ -64,6 +65,11 @@ elseif exid == 4
     singends = [big(0.2);-0.5]
 end
 
+xx = 0.00001:0.001:10
+p = plot()
+plot!(p, xx, f(xx), color="black", label="")
+display(p)
+
 # getting parameters
 ψ, invψ, dψ, Sψ = Getpsi()
 T, β_factor = GetTβ(singends)
@@ -77,5 +83,5 @@ print("calculating C,a,b ...\n")
 β = C*β_factor
 
 INew = zeros(BigFloat,2)
-nidx = [100;200]
+nidx = [10;20]
 nIarray!(INew,HNew,dHNew,nidx)
