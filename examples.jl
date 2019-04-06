@@ -1,10 +1,10 @@
-# "psid" defines ψ.
+# "psid" corresponds to the function ψ.
 # psid = 1: ψ = tanh(.)
 #        2: ψ = sinh(.)
 #        3: ψ = exp(.)
 #        4: ψ = log(exp(.)+1)
 #
-# "singends" defines degree of endpoint singularities.
+# "singends" is the degree of endpoint singularities.
 # if psid == 1
 #     singends = [p; q] when f(x) = O((1-x)^p) (x →  1-0)
 #                                 = O((1+x)^q) (x → -1+0)
