@@ -15,3 +15,13 @@ You need to assign 4 attributes for integration:
 * `psid` : the interval.
 * `singends` : the degree of endpoint singularities.
 * `S` : singularities of the integrand f.
+
+### examples
+In `examples.jl`, we show four examples,
+where ex.1 and ex.2 are the same as [1].
+
+#### references
+[1] R. M. Slevinsky and S. Olver,:
+On the use of conformal maps for the acceleration convergence
+of the trapezoidal rule and sinc numerical methods, SIAM J. Sci. Comput., 37 (2015),
+pp. A676–A700.
