@@ -6,7 +6,7 @@ We realize high-precision integrations in the case
 where the integrand has finite singularities near the real axis.
 
 ### Remark
-This program uses a package [NLsolve](https://github.com/JuliaNLSolvers/NLsolve.jl)
+This program uses the package [NLsolve](https://github.com/JuliaNLSolvers/NLsolve.jl)
 to solve non-linear systems of equations.
 
 ### Settings
@@ -18,7 +18,7 @@ You need to assign 4 attributes for integration:
 
 ### Examples
 In `examples.jl`, we show four examples of numerical integration,
-where ex.1 and ex.2 are the same as [1].
+where ex.1 and ex.2 are the same as those in [1].
 
 ### References
 [1] R. M. Slevinsky and S. Olver,:
