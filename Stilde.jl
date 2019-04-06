@@ -1,6 +1,4 @@
-# functions for supporting operations
-
-# convert Cab to C,a,b
+# Generate S̃∪S_ψ.
 
 # convert pole "z" to dlt, ept (by asinh)
 function zto_asinh(z)

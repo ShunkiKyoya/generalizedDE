@@ -1,4 +1,4 @@
-# functions for getting parameters of the proposed transformation formula
+# Functions to obtain parameters C, a, and b.
 
 function Cabsprit(Cab)
     C = Cab[1]

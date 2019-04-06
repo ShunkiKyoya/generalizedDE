@@ -1,4 +1,4 @@
-# transformation functions: HNew and HNew2
+# transformation functions HNew and HNew2
 
 function HNew(t)
     f = C.*sinh.(t-T) + dlt[1]
@@ -17,7 +17,7 @@ function dHNew(t)
 end
 
 function HNew2(t)
-    f = C.*sinh.(t-T) + (dlt[1]+dlt[Np])./2
+    f = C.*sinh.(t-T) + (dlt[1]+dlt[m])./2
     for i = 1:m-1
         f = f + D[i].*(big(π)./2.*tanh.((t-b[i]).*2./big(π)))
     end
